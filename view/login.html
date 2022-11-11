@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Log in</title>
+    <link rel="stylesheet" href="../estilos/LogIn.css">
+    <link href='https://fonts.googleapis.com/css?family=Alata' rel='stylesheet'>
+    <header class="header lp-header">
+      <div class="logo">
+          <div class="logo-size">
+          </div>
+      </div>
+    </header>
+</head>
+<body>
+    <div id="background">
+      <div id="container">  
+        <div class="box">
+          <H2 class="text">  E-mail</H2>
+          <input type="email" class="writeblock" id="email">
+          <H2>Password</H2>
+          <input type="password" class="writeblock" id="password">
+          <div class="cliques"><div id="remember"><input type="button" class="writeblock" id="rempass"><p>Remember me</p></div><a>I forgot my password</a></div>
+          <button id="login" onclick="userLogin()">Log in</button>
+          <label for="login"></label>
+          <hr width="90%">
+          <h4>You don't have an account yet?</h4>
+          <button id="account">Subscribe to Spotify</button>
+        </div> 
+      </div>
+    </div>
+    <script src="../scripts/login.js"></script>
+</body>
+</html>

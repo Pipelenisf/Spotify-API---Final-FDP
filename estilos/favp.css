@@ -1,0 +1,15 @@
+.fp-banner{
+    background: linear-gradient(360deg, #386DAA 0%, rgba(255, 181, 99, 0) 100%);
+}
+
+.fp-banner-title{
+    position: relative;
+    top: -0.8vh;
+    left: 580px;
+    width: 57vw;
+    height: 10vh;
+}
+
+.liked{
+    background-image: url(../Recursos/heart-hover.png);
+}

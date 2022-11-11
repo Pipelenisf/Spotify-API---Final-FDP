@@ -1,0 +1,104 @@
+.artist-info{
+    visibility: hidden; /*Quitar el hidden para ver el detalle de elemento*/
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    Fill: Solid rgba(217, 217, 217, 0.27);
+    backdrop-filter: blur(5px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.a-info-container{
+    background-color: #191414;
+    width: 56vw;
+    height: 72vh;
+    display: flex;
+    flex-direction: row;
+    border-radius: 50px;
+}
+
+.a2{
+    background-image: url('../Recursos/Demi.png') !important;
+    background-position: center;
+}
+
+.artist-image{
+    background-image: url(https://mor.bo/wp-content/uploads/2022/07/ddlovato.jpg);
+    background-size: inherit;
+    background-position: -383px -129px;
+    display: flex;
+    width: 40%;
+    height: 72vh;
+    border-radius: 50px 0 0 50px;
+}
+
+.artist-content{
+    margin-left: 63px;
+}
+
+.a-title{
+    margin-bottom: 38px;
+}
+
+.a-h-name{
+    margin: 33.500px 0 3px 0;
+}
+
+.a-type{
+    color: rgba(255, 255, 255, 0.378);
+    font-stretch: 5px;
+}
+
+.genres{
+    display: flex;
+    flex-direction: row;
+}
+
+.genre{
+    background-color: rgba(217, 217, 217, 0.059);
+    border-radius: 50px;
+    padding: 10px 15px;
+    margin-right: 10px;
+}
+
+.icons{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 20px 0 20px 110px;
+}
+
+.close{
+    background-image: url(../Recursos/close.png);
+}
+
+.ac-h2{
+    margin-bottom: 10px;
+}
+
+
+.a3{
+    background-image: url(http://playlistmagazine.net/wp-content/uploads/2022/08/paramore.jpeg);
+    background-position: center;
+}
+
+.a4{
+    background-image: url(https://i.pinimg.com/736x/74/c6/b3/74c6b34b2409703cd07a6a049a0d617d.jpg);
+    background-position: center;
+    background-position-y: -10px;
+}
+
+.a5{
+    background-image: url(https://i.pinimg.com/originals/a3/35/bd/a335bdc851a68a3c4a2644165ef24116.jpg);
+    background-position: center;
+    background-position-y: -10px;
+}
+
+.a6{
+    background-image: url(https://lastfm.freetls.fastly.net/i/u/770x0/0bc83d1c66b078d69bc7ea7fa77e7716.jpg);
+    background-position: center;
+    background-position-y: 0;
+}
+

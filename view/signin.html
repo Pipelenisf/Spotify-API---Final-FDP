@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign in</title>
+    <link rel="stylesheet" href="../estilos/Sign In Page.css">
+    <link href='https://fonts.googleapis.com/css?family=Alata' rel='stylesheet'>
+    <header class="header lp-header">
+        <div class="logo">
+            <div class="logo-size">
+            </div>
+        </div>
+    </header>
+</head>
+    <body>
+        <div class="landscape">
+            <div id="background"></div>
+            <div class="box">
+                <h1>Register for free</h1>
+                <div class="line">
+                    <div class="category">
+                        <h3>Name</h3>
+                        <input type="text" class="writeblock" id="username"/>
+                    </div>
+                    <div class="category">
+                        <h3>Last Name</h3>
+                        <input type="text" class="writeblock"/>
+                    </div>
+                </div>
+                <div class="line">
+                    <div class="category">
+                        <h3>E-mail</h3>
+                        <input type="email" class="writeblock" id="email"/>
+                    </div>
+                </div>
+                <h3>Birthday</h3>
+                <div class="line">
+                    <div class="category">
+                        <h3>Day</h3>
+                        <input type="number" class="writeblock" min="1" max="31"/>
+                    </div>
+                    <div class="category">
+                        <h3>Month</h3>
+                        <input type="number" class="writeblock" min="1" max="12"/>
+                    </div>
+                    <div class="category">
+                        <h3>Year</h3>
+                        <input type="number" class="writeblock" min="1900" max="2022"/>
+                    </div>
+                </div>
+                <div class="line">
+                    <div class="category">
+                        <h3>Country</h3>
+                        <input type="text" class="writeblock"/>
+                    </div>
+                    <div class="category">
+                        <h3>Cellphone</h3>
+                        <input type="tel" class="writeblock"/>
+                    </div>
+                </div>
+                <div class="line">
+                    <div class="category">
+                         <h3>Username</h3>
+                         <input type="text" class="writeblock"/>
+                    </div>
+                </div>
+                <div class="line">
+                    <div class="category">
+                         <h3>Password</h3>
+                         <input type="password" class="writeblock" id="password"/>
+                    </div>
+                    <div class="category">
+                        <h3>Password Verification</h3>
+                        <input type="password" class="writeblock"/>
+                   </div>
+                </div>
+                <div class="line" id="justtext">
+                    <input type="button" class="writeblock" id="terms"><p>I agree with the&nbsp;</p><a> Terms and Conditions</a><p>&nbsp; and&nbsp;</p><a> Privacy Policy</a><p>&nbsp; of Spotify</p>
+                </div>
+                    <button id="create" onclick="createUserAccount()">Sign up</button>
+                    <div class="line"id="justtext"><p>You already have an account?</p></div>
+                    <div class="line" id="justtext"><a href="./login.html">Log in</a><p>&nbsp; here</p></div>
+            </div>
+        </div>
+        <script src="../scripts/signin.js"></script>
+    </body>
+</html>

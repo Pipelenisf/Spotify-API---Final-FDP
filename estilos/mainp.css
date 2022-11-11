@@ -1,0 +1,180 @@
+body{
+    display: flex;
+    flex-direction: column;
+    overflow-x: hidden;
+}
+
+.mp-header{
+    right: 0;
+    left: 0;
+    background-color: transparent;
+    position: absolute;
+    width: 94vw;
+    z-index: 1;
+}
+
+.mp-logo{
+    width: auto;
+    display: flex;
+    align-items: center;
+}
+
+.h-input{
+    display: flex;
+    align-items: center;
+}
+
+.input-size{
+    border: none;
+    background: rgba(255, 255, 255, 0.3);
+    border-radius: 50px;
+    width: 26vw;
+    height: 5vh;
+}
+
+.input-size::placeholder{
+    padding: 0 0 0 25px;
+}
+
+.secondary-button{
+    background-color: transparent;
+    border: 2px solid white ;
+    cursor: pointer;
+}
+
+.secondary-button:hover{
+    color: #191414;
+    background-color: white;
+}
+
+.h-button{
+    display: flex;
+}
+
+.banner{
+    position: absolute;
+    width: 100vw;
+    height: 39vh;
+}
+
+.mp-banner{
+    background: linear-gradient(360deg, #FFB563 0%, rgba(255, 181, 99, 0) 100%);
+}
+
+.img-mp-banner{
+    background-image: url('../Recursos/Banner-image.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    top: -7.9vh;
+    left: 408px;
+    width: 57vw;
+    height: 30.1vh;
+}
+
+.mp-links{
+    position: relative;
+    top: 93px;
+    display: flex;
+    flex-direction: column;
+    margin-left: 55px;
+}
+
+h3{
+    margin: 0;
+}
+
+a{  
+    font-size: 18px !important;
+    width: auto;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.main-icon{
+    background-size: cover;
+    width: 25px;
+    height: 25px;
+    margin: 8px;
+}
+
+.search{
+    background-image: url('../Recursos/001-search-interface-symbol.png');
+}
+
+.home{
+    background-image: url('../Recursos/homepage.png');
+}
+
+.home:hover{
+    background-image: url('../Recursos/homepage-fill.png');
+}
+
+.like{
+    background-image: url('../Recursos/003-heart.png');
+}
+
+.like:hover{
+    background-image: url('../Recursos/heart-fill.png');
+}
+
+.b{
+    width: 100vw;
+    height: 39vh;
+}
+
+.mp-h2{
+    margin-left: 63px;
+}
+
+.artists-container{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 0 63px 0 63px;
+}
+
+.artist-pic{
+    background-color: rgba(217, 217, 217, 0.015);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 40px 20px 30px 20px;
+    margin-bottom: 20px;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: background-color .5s;
+}
+
+
+.artist-pic:hover{
+    background-color: rgba(217, 217, 217, 0.1);
+}
+
+.a-image{
+    background-size: cover;
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+}
+
+span{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 160px;
+    margin-top: 20px;
+}
+
+.secondary-icon{
+    background-size: cover;
+    width: 15px;
+    height: 15px;
+}
+
+.secondary-icon:hover{
+    background-image: url('../Recursos/heart-hover.png');
+}
