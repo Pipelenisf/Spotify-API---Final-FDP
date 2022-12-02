@@ -175,6 +175,13 @@ span{
     height: 15px;
 }
 
+.favorite-icon{
+    background-image: url('../Recursos/heart-hover.png');
+    background-size: cover;
+    width: 15px;
+    height: 15px;
+}
+
 .secondary-icon:hover{
     background-image: url('../Recursos/heart-hover.png');
 }

@@ -1,16 +1,3 @@
-const localStorage = window.localStorage
-const cardContainer = document.getElementById("artist-container")
-const artistDetail = document.getElementById("artist-detail")
-
-function validateLoggedUser(){
-    const registeredUser = localStorage.getItem("userAccount")
-    const userAccount = JSON.parse(registeredUser)
-
-    if(!userAccount.logged){
-        window.location.href = "./login.html"
-    }
-}
-
 const artists = [
     {
         id: 1,
@@ -115,106 +102,31 @@ const artists = [
     },
 ]
 
-let pos = 0
-const card = artists[pos]
-
 function createArtistCard(card){
-    var isfav= isfavorite(card.id);
-
-    if (isfav){
-        return `<div class="artist-pic" onclick="cardClicked()">
-        <div class="a-image" style="background-image: url(${card.image}); ${card.background}"></div>
-        <span>
-        <div class="a-name">${card.name}</div>
-        <div class="favorite-icon like" onclick="removefavorite(`+card.id+`)"></div>
-        </span>
-        </div>`
-    }
-    else{
-        return `<div class="artist-pic" onclick="cardClicked()">
-        <div class="a-image" style="background-image: url(${card.image}); ${card.background}"></div>
-        <span>
-        <div class="a-name">${card.name}</div>
-        <div class="secondary-icon like" onclick="SetLikeArtist(`+card.id+`)"></div>
-        </span>
-        </div>`
-    }
+    return `<div class="artist-pic" onclick="cardClicked()">
+    <div class="a-image" style="background-image: url(${card.image}); ${card.background}"></div>
+    <span>
+    <div class="a-name">${card.name}</div>
+    <div class="favorite-icon like" onclick="SetLikeArtist(`+card.id+`)"></div>
+    </span>
+    </div>`
 }
 
-function allArtistsCards(){
-    cardContainer.innerHTML="";
-    artists.forEach(card => {
-        cardContainer.innerHTML += createArtistCard(card, pos)
-        pos++
-    })
-}
-
-
-function cardClicked() {
-    artists.forEach(card => {
-        document.getElementById("a-name").innerHTML = card.name
-        artistDetail.style.visibility = "visible"
-    })
-    
-}
-
-function closeDetail() {
-        artistDetail.style.visibility = "hidden"
-
-}
-function SetLikeArtist(idartist){
-    var vFav = null;
-if(localStorage.getItem("favorite"))
-vFav = localStorage.getItem("favorite")
-else vFav="";
-
-vFav += idartist + ',';
-localStorage.setItem("favorite",vFav);
-
-allArtistsCards() ;
-}
-
-function isfavorite(id) {
-    var isfav= false;
+function LoadFav(){
     var vFav = localStorage.getItem("favorite");
+
+    var cardContainer= document.getElementById('artist-container');
     if(vFav){
         var arrayfav = vFav.split(",")
         arrayfav.forEach(num => {
             var indexArtist= parseInt(num);
             if (!isNaN(indexArtist)){
-               if (indexArtist== id){
-                    isfav= true;
-               }
-
-            }
-            
-        })
-    }
-    return isfav;
-
-}
-
-function removefavorite(id) {
-    var vFav = localStorage.getItem("favorite");
-    var newFavs= "";
-
-    if(vFav){
-        var arrayfav = vFav.split(",")
-        arrayfav.forEach(num => {
-            var indexArtist= parseInt(num);
-            if (!isNaN(indexArtist)){
-               if (indexArtist != id){
-                    newFavs += indexArtist + ',';
-               }
+                var card= artists[indexArtist-1];
+                cardContainer.innerHTML += createArtistCard(card)
 
             }
             
         })
 
-        localStorage.setItem('favorite', newFavs);
-        allArtistsCards();
     }
-
 }
-allArtistsCards()
-validateLoggedUser()

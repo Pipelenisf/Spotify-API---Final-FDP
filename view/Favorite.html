@@ -11,7 +11,7 @@
     <link rel="stylesheet" href="../estilos/landingp.css">
     <link href='https://fonts.googleapis.com/css?family=Alata' rel='stylesheet'>
 </head>
-<body>
+<body onload="LoadFav()">
     <header class="header mp-header">
         <div class="mp-logo">
             <div class="logo-size">
@@ -32,7 +32,10 @@
         <h1 class="fp-banner-title">Your favorite artists</h1>
     </div>  
     <div class="b"></div>
-    <div class="mp-content">
+    <div class="artists-container" id="artist-container">
+   
+    </div>
+    <!-- <div class="mp-content">
         <div>
             <h2 class="mp-h2">Artists</h2>
         </div>
@@ -72,6 +75,8 @@
                 </div>
             </div>
     
-        </div>
+        </div> -->
+
+        <script src="../scripts/Favorite.js"></script>
 </body>
 </html>
