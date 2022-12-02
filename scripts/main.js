@@ -122,19 +122,19 @@ function createArtistCard(card){
     var isfav= isfavorite(card.id);
 
     if (isfav){
-        return `<div class="artist-pic" onclick="cardClicked(`+card.id+`)">
-        <div class="a-image" style="background-image: url(${card.image}); ${card.background}"></div>
+        return `<div class="artist-pic">
+        <div class="a-image" onclick="cardClicked(`+card.id+`)" style="background-image: url(${card.image}); ${card.background}"></div>
         <span>
-        <div class="a-name">${card.name}</div>
+        <div class="a-name" onclick="cardClicked(`+card.id+`)">${card.name}</div>
         <div class="favorite-icon like" onclick="removefavorite(`+card.id+`)"></div>
         </span>
         </div>`
     }
     else{
-        return `<div class="artist-pic" onclick="cardClicked(`+card.id+`)">
-        <div class="a-image" style="background-image: url(${card.image}); ${card.background}"></div>
+        return `<div class="artist-pic">
+        <div class="a-image" onclick="cardClicked(`+card.id+`)" style="background-image: url(${card.image}); ${card.background}"></div>
         <span>
-        <div class="a-name">${card.name}</div>
+        <div class="a-name" onclick="cardClicked(`+card.id+`)">${card.name}</div>
         <div class="secondary-icon like" onclick="SetLikeArtist(`+card.id+`)"></div>
         </span>
         </div>`
