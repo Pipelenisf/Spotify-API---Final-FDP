@@ -14,7 +14,7 @@ body {
     background-image: url('./Recursos2/Sign\ In\ background.png');
     background-size: cover;
     background-repeat: no-repeat;
-    height: 100vh;
+    height: 90.5vh;
     width: 40vw;
     top: 0;
     left: 0;
@@ -31,25 +31,26 @@ body {
 .category {
     display: flex;
     flex-direction: column;
-    width: 50%;
+    width: 60%;
 }
 
 .line {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     align-items: center;
 }
 
 
 .writeblock {
-    border-radius: 10px;
-    height: 15px;
+    border-radius: 20px;
+    height: 25px;
     margin-right: 10px;
+    margin-bottom: 20px;
 }
 
 #create {
     position: relative;
-    left: 341.475px;
+    left: 329.156px;
 }
 
 #terms {
@@ -60,18 +61,14 @@ body {
 
 
 h3 {
-    margin-top: 12px;
-    margin-bottom: 12px;
+    margin-top: 20px;
+    margin-bottom: 20px;
 }
 
-h4 {
-    margin-top: 12px;
-    margin-bottom: 12px;
-}
 
 p {
-    margin-top: 8px;
-    margin-bottom: 8px;
+    margin-top: 5px;
+    margin-bottom: 5px;
     font-family: 'Alata', sans-serif;
     font-style: normal;
     font-weight: 400;
@@ -106,17 +103,19 @@ h3{
     font-family: 'Alata', sans-serif;
     font-style: normal;
     font-weight: 450;
-    font-size: 15px;
+    font-size: 20px;
     line-height: 25px;
     margin-bottom: 10px;
 }
 
 
 
-#justtext{
+.justtext{
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: baseline;
+    flex-direction: row;
+
 }
 
 h1{
@@ -125,6 +124,10 @@ h1{
     font-weight: 450;
     font-size: 45px;
     line-height: 33px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin-bottom: 80px;
 }
 
 .header{
@@ -151,7 +154,7 @@ h1{
 .logo-size{
     height: 50px;
     width: 164px;
-    background-image: url('./Recursos2/Logo.png');
+    background-image: url('./Recursos/Logo.png');
     background-size: contain;
     background-repeat: no-repeat;
 }
