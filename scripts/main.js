@@ -33,12 +33,12 @@ const artists = [
         id: 2,
         name: "Demi Lovato",
         type: "Artist",
-        popularity: "94",
-        followers: "57,998,406",
+        popularity: "78",
+        followers: "15,778,356",
         genres: [
-            "Reggaeton",
-            "Trap",
             "Pop",
+            "Rock",
+            "R&B",
         ],
         favorite: false,
         image:"../Recursos/Demi.png",
@@ -50,11 +50,11 @@ const artists = [
         id: 3,
         name: "Paramore",
         type: "Artist",
-        popularity: "94",
-        followers: "57,998,406",
+        popularity: "89",
+        followers: "32,398,624",
         genres: [
-            "Reggaeton",
-            "Trap",
+            "Neutral",
+            "Rock",
             "Pop",
         ],
         favorite: false,
@@ -67,11 +67,11 @@ const artists = [
         id: 4,
         name: "Ariana Grande",
         type: "Artist",
-        popularity: "94",
-        followers: "57,998,406",
+        popularity: "98",
+        followers: "87,193,406",
         genres: [
-            "Reggaeton",
-            "Trap",
+            "R&B",
+            "Soul",
             "Pop",
         ],
         favorite: false,
@@ -85,10 +85,10 @@ const artists = [
         name: "Dua Lipa",
         type: "Artist",
         popularity: "94",
-        followers: "57,998,406",
+        followers: "65,729,013",
         genres: [
-            "Reggaeton",
-            "Trap",
+            "House",
+            "Disco",
             "Pop",
         ],
         favorite: false,
@@ -101,11 +101,11 @@ const artists = [
         id: 6,
         name: "Shakira",
         type: "Artist",
-        popularity: "94",
-        followers: "57,998,406",
+        popularity: "90",
+        followers: "30,019,625",
         genres: [
             "Reggaeton",
-            "Trap",
+            "Rock",
             "Pop",
         ],
         favorite: false,
@@ -122,7 +122,7 @@ function createArtistCard(card){
     var isfav= isfavorite(card.id);
 
     if (isfav){
-        return `<div class="artist-pic" onclick="cardClicked()">
+        return `<div class="artist-pic" onclick="cardClicked(`+card.id+`)">
         <div class="a-image" style="background-image: url(${card.image}); ${card.background}"></div>
         <span>
         <div class="a-name">${card.name}</div>
@@ -131,7 +131,7 @@ function createArtistCard(card){
         </div>`
     }
     else{
-        return `<div class="artist-pic" onclick="cardClicked()">
+        return `<div class="artist-pic" onclick="cardClicked(`+card.id+`)">
         <div class="a-image" style="background-image: url(${card.image}); ${card.background}"></div>
         <span>
         <div class="a-name">${card.name}</div>
@@ -150,10 +150,22 @@ function allArtistsCards(){
 }
 
 
-function cardClicked() {
+function cardClicked(idArtistSel) {
     artists.forEach(card => {
-        document.getElementById("a-name").innerHTML = card.name
-        artistDetail.style.visibility = "visible"
+        if (card.id== idArtistSel){
+            document.getElementById("a-name").innerHTML = card.name;
+            document.getElementById("artist-image").style.backgroundImage= "url('"+ card.image+ "')" ;
+            document.getElementById("popularity").innerHTML = card.popularity;
+            document.getElementById("followers").innerHTML = card.followers;
+            document.getElementById("genres").innerHTML= '';
+
+            card.genres.forEach(gen => {
+                document.getElementById("genres").innerHTML += `<p class="genre">`+ gen +`</p>`;
+            })
+
+            
+            artistDetail.style.visibility = "visible"
+        }
     })
     
 }
